@@ -561,7 +561,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.18172252, y: 0.08163361}
+  m_ConnectedAnchor: {x: 15.48, y: -2.98}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 150
+  jumpForce: 420
   isJumping: 0
 --- !u!60 &504822180
 PolygonCollider2D:
@@ -2090,7 +2090,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.20245491, y: 0.102625094}
+  m_ConnectedAnchor: {x: 29.18, y: -2.98}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
