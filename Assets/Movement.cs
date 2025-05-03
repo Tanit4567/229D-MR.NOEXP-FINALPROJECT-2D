@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb2d;
 
+    Animator anim;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,15 @@ public class PlayerMovement : MonoBehaviour
 
         // ??????????????-???
         rb2d.linearVelocity = new Vector2(moveInput * speed, rb2d.linearVelocity.y);
+
+        if (moveInput == 0)
+        {
+            anim.SetBool("Run", false);
+        }
+        else
+        {
+            anim.SetBool("Run", true);
+        }
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
