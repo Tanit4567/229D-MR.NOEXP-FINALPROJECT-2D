@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float moveInput;
     private Rigidbody2D rb2d;
+    bool facingRight = true;
 
     Animator anim;
 
@@ -24,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
         // ??????????????-???
         rb2d.linearVelocity = new Vector2(moveInput * speed, rb2d.linearVelocity.y);
+
+        if (moveInput > 0 && !facingRight)
+            Flip();
+        else if (moveInput < 0 && facingRight)
+            Flip();
 
         if (moveInput == 0)
         {
@@ -61,5 +67,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }//OnCollisionExit2D
-
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }
