@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class playerhit: MonoBehaviour
+public class player : MonoBehaviour
 {
     int health = 15;
     
