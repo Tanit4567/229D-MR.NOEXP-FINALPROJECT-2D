@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     int health = 15;
@@ -15,6 +15,7 @@ public class player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(0);
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
