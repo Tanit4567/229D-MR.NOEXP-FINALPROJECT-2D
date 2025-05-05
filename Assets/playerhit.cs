@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class player : MonoBehaviour
 {
     int health = 15;
-    
+    [SerializeField] Slider healthSlider;
+
     void Start()
     {
         
@@ -24,6 +26,8 @@ public class player : MonoBehaviour
         {
             health -= 5;
             Debug.Log(health);
+
+            healthSlider.value = health;
         }
     }
 }
